@@ -1,30 +1,30 @@
 class Localci < Formula
   desc "Local post-commit validation runner"
   homepage "https://steveasleep.com/localci/"
-  version "0.2.9"
+  version "0.2.10"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/irskep/localci/releases/download/v0.2.9/localci_0.2.9_darwin_arm64.tar.gz"
-      sha256 "0750cf0ad065e66eb308f4b6896eda54f1f75b43319a3c75324ee27d6a619a78"
+      url "https://github.com/irskep/localci/releases/download/v0.2.10/localci_0.2.10_darwin_arm64.tar.gz"
+      sha256 "b43e0883485a60ae53e439fdc254dd21167fe9c5922910f92d7a6c79c2f2e674"
     end
 
     on_intel do
-      url "https://github.com/irskep/localci/releases/download/v0.2.9/localci_0.2.9_darwin_amd64.tar.gz"
-      sha256 "5ba70aa2b07022a1d210312429c48d24a47f72bea82359830ca3b3f55e36f141"
+      url "https://github.com/irskep/localci/releases/download/v0.2.10/localci_0.2.10_darwin_amd64.tar.gz"
+      sha256 "566067af107269f2422b8e37eeb850beb5fa1a8067f3cc732f30a03779567981"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/irskep/localci/releases/download/v0.2.9/localci_0.2.9_linux_arm64.tar.gz"
-      sha256 "1918e63a882a9d8bb841909721b49046ff53c132efacefbc8434b65547d90de6"
+      url "https://github.com/irskep/localci/releases/download/v0.2.10/localci_0.2.10_linux_arm64.tar.gz"
+      sha256 "f9594bafc7edb58d514ee2f06e794bec9c12e729984c4f3b3b97782621a33cf9"
     end
 
     on_intel do
-      url "https://github.com/irskep/localci/releases/download/v0.2.9/localci_0.2.9_linux_amd64.tar.gz"
-      sha256 "610978cfefc92f02e591c76579ff8cf58a2a30cb5a57ddec7c4b4643d59f61b6"
+      url "https://github.com/irskep/localci/releases/download/v0.2.10/localci_0.2.10_linux_amd64.tar.gz"
+      sha256 "649dca2510cc9fa0b5e20abb03ea3525ea4d088a74c336374c9305718de79faf"
     end
   end
 
@@ -35,6 +35,6 @@ class Localci < Formula
   end
 
   test do
-    assert_match "local post-commit validation runner", shell_output("#{bin}/localci --help")
+    assert_match version.to_s, shell_output("#{bin}/localci --version")
   end
 end
