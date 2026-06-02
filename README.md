@@ -6,5 +6,3 @@ Install `autowt`:
 brew tap irskep/tap
 brew install autowt
 ```
-
-This installs both `autowt` and `awt`.
